@@ -12,5 +12,7 @@
 </head>
 <body>
     <h1> Next Page </h1>
+    <h2>${mydata}</h2>
+    <img src="/otto.jpeg">
 </body>
 </html>

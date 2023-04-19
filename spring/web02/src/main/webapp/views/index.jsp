@@ -13,5 +13,6 @@
 <body>
     <h1> Initial Display </h1>
     <h1><a href="/nex"> Next Page </a></h1>
+    <h1><a href="/second"> Next Page </a></h1>
 </body>
 </html>
