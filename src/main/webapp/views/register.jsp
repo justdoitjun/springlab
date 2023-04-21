@@ -4,21 +4,7 @@
       rel="stylesheet">
 
 <script>
-    let register_form = {
-        init: function () {
-            $("#register_btn").click(function () {
-                register_form.send(); // this.send() 안됨! 유의
-            });
-        },
-        // 서버로 보내기
-        send: function () {
-            $("#register_form").attr({
-                'action': '/registerimpl',
-                'method': 'post'
-            });
-            $("#register_form").submit();
-        }
-    };
+
 
     // 화면 로딩
     $(function () {
@@ -44,11 +30,11 @@
                                 name="id"
                                 id="id"
                         />
-                        <div class="input-group-append">
-                            <button class="btn btn-success" type="button" id="btnIdCheck">
-                                중복체크
-                            </button>
-                        </div>
+<%--                        <div class="input-group-append">--%>
+<%--                            <button class="btn btn-success" type="button" id="btnIdCheck">--%>
+<%--                                중복체크--%>
+<%--                            </button>--%>
+<%--                        </div>--%>
                     </div>
 
                     <div class="input-group mb-3">
@@ -61,90 +47,90 @@
                         />
                     </div>
 
-                    <div class="input-group mb-3">
-                        <input
-                                type="password"
-                                class="form-control"
-                                name="pwd2"
-                                id="pwd2"
-                                placeholder="패스워드확인"
-                        />
-                    </div>
+<%--                    <div class="input-group mb-3">--%>
+<%--                        <input--%>
+<%--                                type="password"--%>
+<%--                                class="form-control"--%>
+<%--                                name="pwd2"--%>
+<%--                                id="pwd2"--%>
+<%--                                placeholder="패스워드확인"--%>
+<%--                        />--%>
+<%--                    </div>--%>
 
                     <div class="input-group mb-3">
                         <input
                                 type="text"
                                 class="form-control"
                                 placeholder="이름"
-                                name="username"
+                                name="name"
                                 id="username"
                         />
                     </div>
 
-                    <div class="input-group mb-3">
-                        <input
-                                type="text"
-                                class="form-control"
-                                placeholder="닉네임"
-                                name="nickname"
-                                id="nickname"
-                        />
-                    </div>
+<%--                    <div class="input-group mb-3">--%>
+<%--                        <input--%>
+<%--                                type="text"--%>
+<%--                                class="form-control"--%>
+<%--                                placeholder="닉네임"--%>
+<%--                                name="nickname"--%>
+<%--                                id="nickname"--%>
+<%--                        />--%>
+<%--                    </div>--%>
 
-                    <div class="input-group mb-3">
-                        <input
-                                type="text"
-                                class="form-control"
-                                placeholder="email"
-                                name="email"
-                                id="email"
-                        />
-                    </div>
+<%--                    <div class="input-group mb-3">--%>
+<%--                        <input--%>
+<%--                                type="text"--%>
+<%--                                class="form-control"--%>
+<%--                                placeholder="email"--%>
+<%--                                name="email"--%>
+<%--                                id="email"--%>
+<%--                        />--%>
+<%--                    </div>--%>
 
-                    <div class="input-group mb-3">
-                        <input
-                                type="text"
-                                class="form-control"
-                                placeholder="전화번호"
-                                name="phone"
-                                id="phone"
-                        />
-                    </div>
+<%--                    <div class="input-group mb-3">--%>
+<%--                        <input--%>
+<%--                                type="text"--%>
+<%--                                class="form-control"--%>
+<%--                                placeholder="전화번호"--%>
+<%--                                name="phone"--%>
+<%--                                id="phone"--%>
+<%--                        />--%>
+<%--                    </div>--%>
 
-                    <div class="input-group mb-3">
-                        <input
-                                type="text"
-                                class="form-control"
-                                id="zipcode"
-                                name="zipcode"
-                                placeholder="우편번호"
-                        />
-                        <input
-                                type="button"
-                                onclick="execDaumPostcode()"
-                                value="우편번호 찾기"
-                        /><br/>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input
-                                type="text"
-                                class="form-control"
-                                placeholder="도로명 또는 지번주소"
-                                name="address1"
-                                id="address1"
-                        />
+<%--                    <div class="input-group mb-3">--%>
+<%--                        <input--%>
+<%--                                type="text"--%>
+<%--                                class="form-control"--%>
+<%--                                id="zipcode"--%>
+<%--                                name="zipcode"--%>
+<%--                                placeholder="우편번호"--%>
+<%--                        />--%>
+<%--                        <input--%>
+<%--                                type="button"--%>
+<%--                                onclick="execDaumPostcode()"--%>
+<%--                                value="우편번호 찾기"--%>
+<%--                        /><br/>--%>
+<%--                    </div>--%>
+<%--                    <div class="input-group mb-3">--%>
+<%--                        <input--%>
+<%--                                type="text"--%>
+<%--                                class="form-control"--%>
+<%--                                placeholder="도로명 또는 지번주소"--%>
+<%--                                name="address1"--%>
+<%--                                id="address1"--%>
+<%--                        />--%>
                         <!-- <input type="text" id="sample4_jibunAddress" placeholder="지번주소" /> -->
-                    </div>
-                    <span id="guide" style="color: #999; display: none"></span>
-                    <div class="input-group mb-3">
-                        <input
-                                type="text"
-                                class="form-control"
-                                placeholder="상세주소"
-                                name="address2"
-                                id="address2"
-                        />
-                    </div>
+<%--                    </div>--%>
+<%--                    <span id="guide" style="color: #999; display: none"></span>--%>
+<%--                    <div class="input-group mb-3">--%>
+<%--                        <input--%>
+<%--                                type="text"--%>
+<%--                                class="form-control"--%>
+<%--                                placeholder="상세주소"--%>
+<%--                                name="address2"--%>
+<%--                                id="address2"--%>
+<%--                        />--%>
+<%--                    </div>--%>
                     <!-- <div class="input-group mb-4">
                       <input type="text" id="sample4_extraAddress" placeholder="참고항목" />
                     </div> -->

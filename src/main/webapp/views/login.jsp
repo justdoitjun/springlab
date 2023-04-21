@@ -3,22 +3,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600&family=Nanum+Myeongjo:wght@800&display=swap"
       rel="stylesheet">
 <script>
-    let login_form = {
-        init: function () {
-            $("#login_btn").click(function () {
-                console.log(this);
-                login_form.send(); // this.send() 안됨! 유의
-            });
-        },
-        // 서버로 보내기
-        send: function () {
-            $("#login_form").attr({
-                'action': '/loginimpl',
-                'method': 'post'
-            });
-            $("#login_form").submit();
-        }
-    };
+
     // 화면 로딩
     $(function () {
         login_form.init();
@@ -44,7 +29,7 @@
                         <label class="control-label col-sm-2" for="pwd">패스워드:</label>
                         <div class="col-sm-10">
                             <input type="password" class="form-control" id="pwd" placeholder="Enter password"
-                                   name="password">
+                                   name="pwd">
                         </div>
                     </div>
                     <div class="form-group">
