@@ -31,7 +31,7 @@ public class ItemController {
     @RequestMapping("/all")
     public String all(Model model) {
         List<Item> list = new ArrayList<>();
-        list.add(new Item(1,"tomato1", 100, "a.jpeg", new Date()));
+        list.add(new Item(1,"tomato1", 100, "a.jp드eg", new Date()));
         list.add(new Item(2,"tomato2", 200, "b.jpeg", new Date()));
         list.add(new Item(3,"tomato3", 300, "c.jpeg", new Date()));
         list.add(new Item(4,"tomato4", 400, "d.jpeg", new Date()));

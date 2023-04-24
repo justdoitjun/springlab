@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=52e8d1c57e9ed8ce16fa4bd903d1fb55"></script>
     <script src="/js/index0421.js"></script>
     <style>
         /* Remove the navbar's default margin-bottom and rounded borders */
@@ -60,6 +61,8 @@
             <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
                 <li><a href="/jsp">JSP</a></li>
+                <li><a href="/chart">CHART</a></li>
+                <li><a href="/map">MAP</a></li>
                 <li><a href="/item">Item</a></li>
                 <li><a href="/cust">Cust</a></li>
                 <li><a href="/ajax">Ajax</a></li>
