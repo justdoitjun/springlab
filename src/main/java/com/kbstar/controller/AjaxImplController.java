@@ -90,4 +90,5 @@ public class AjaxImplController {
         }
         return json;
     }// DB 가 없으니깐 대충 흐름만 봐. 그냥 저 3가지는 안된다고 보낼 생각임.
+
 }
