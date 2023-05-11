@@ -3,5 +3,7 @@
 <div class="col-sm-2 sidenav">
   <p><a href="/pic">Picture 영상통화</a></p>
   <p><a href="/websocket">Websocket 웹소켓</a></p>
+  <p><a href="/cfr1">CFR1</a></p>
+  <p><a href="/cfr2">CFR2</a></p>
   <p><a href="#">HomePage Link</a></p>
 </div>

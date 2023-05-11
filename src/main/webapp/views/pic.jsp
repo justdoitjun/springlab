@@ -7,13 +7,13 @@
         myVideoStream:null, //전역변수로 선언
         init:function(){
             this.myVideoStream = document.querySelector('#myVideo');
-            $('#cfr_btn').click(function(){
-                $('#cfr_form').attr({
-                    'method':'post',
-                    'action':'/cfrimpl'
-                });
-                $('#cfr_form').submit();
-            });     // 이벤트 발생시.
+            // $('#cfr_btn').click(function(){
+            //     $('#cfr_form').attr({
+            //         'method':'get',
+            //         'action':'/cfrimpl'
+            //     });
+            //     $('#cfr_form').submit();
+            // });     // 이벤트 발생시.
         },// init -->
         getVideo:function(){
             navigator.getMedia = navigator.getUserMedia || navigator.webkitGetUserMedia
@@ -80,8 +80,12 @@
     <input type=button value="get Pic(스크린샷)" onclick="pic.takeSnapshot();">
     <input type=button value="send Pic(서버에 스크린샷 송부)" onclick="pic.send();"><br>
     <input type=button value="Auto Pic(자동 스크린샷)" onclick="pic.takeAuto(5000);">
-    <form id="cfr_form">
+    <form id="cfr_form" action="/mycfr" method="/get">
         Image Name:<input type="text" name="imgname" id="imgname"><br>
-        <button id="cfr_btn">CFR</button>
+        <button type="submit" id="cfr_btn">CFR</button>
     </form>
+
+    <h2>${result.emotion}</h2>
+    <h2>${result.pose}</h2>
+
 </div>

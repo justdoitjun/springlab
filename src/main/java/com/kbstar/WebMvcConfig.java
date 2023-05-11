@@ -17,6 +17,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/img/**").addResourceLocations(imgdir);
         registry.addResourceHandler("/logs/**").addResourceLocations(logdir);
+       // registry.addResourceHandler("/uimg/**").addResourceLocations(imgpath);
         // 이 프로젝트에 있는 logs라는 폴더에 있는 로그파일을 리소스로 쓰겠다. 언제? logdir이라고 나오면 말이지.
     }
 

@@ -30,8 +30,8 @@ public class MainController {
     @RequestMapping("/")
     public String main(Model model) throws Exception{
         //딱 들어오자마자 기상청 날씨 가져와라
-        String result = WeatherUtil.getWeather1("109");
-        model.addAttribute("weatherinfo", result);
+        //String result = WeatherUtil.getWeather1("109");
+        //model.addAttribute("weatherinfo", result);
         return "index";
     }
     //1996년도부터 쓴 방식.... quics?page=bs01   Get방식
@@ -133,6 +133,20 @@ public class MainController {
         }
         //수정이 되었다면, custinfo Page로 다시 이동한다.
         return "redirect:/custinfo?id="+ cust.getId(); //다시 이동한다. 새로고침.
+    }
+
+    @RequestMapping("/cfr1")
+    public String cfr1(Model model) {
+        model.addAttribute("center",
+                "cfr1");
+        return "index";
+    }
+
+    @RequestMapping("/cfr2")
+    public String cfr2(Model model) {
+        model.addAttribute("center",
+                "cfr2");
+        return "index";
     }
 
 

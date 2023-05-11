@@ -38,7 +38,7 @@
 
 
     $(()=>{
-        weatherRequest.init();
+        //weatherRequest.init();
     });//document on Ready
 </script>
 
